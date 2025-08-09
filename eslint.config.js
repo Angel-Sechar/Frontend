@@ -1,16 +1,18 @@
 // @ts-check
+import airbnb from 'eslint-config-airbnb-base';
+
 const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
+const tseslint = require("@typescript-eslint/eslint-plugin");
 const angular = require("angular-eslint");
 
-module.exports = tseslint.config(
+module.exports = [
   {
     files: ["**/*.ts"],
     extends: [
       eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
+      tseslint.configs.recommended,
+      tseslint.configs.stylistic,
+      angular.configs.tsRecommended
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -40,4 +42,4 @@ module.exports = tseslint.config(
     ],
     rules: {},
   }
-);
+];
