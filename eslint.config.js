@@ -1,5 +1,4 @@
 // @ts-check
-import airbnb from 'eslint-config-airbnb-base';
 
 const eslint = require("@eslint/js");
 const tseslint = require("@typescript-eslint/eslint-plugin");
