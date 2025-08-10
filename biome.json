@@ -1,19 +1,14 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
-  
+
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "files": { 
+  "files": {
     "ignoreUnknown": true,
-	"includes": [
-	"**/*.{ts,js,html,json,css}",
-    "!**/dist/**",
-    "!**/build/**",
-    "!**/node_modules/**"
-	]
+    "includes": ["**/*.{ts,js,json,css}", "!**/dist/**", "!**/build/**", "!**/node_modules/**"]
   },
   "formatter": {
     "enabled": true,
@@ -58,15 +53,7 @@
       "quoteStyle": "single"
     }
   },
-  "html": {
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf"
-  }
-},
-    "assist": {
+  "assist": {
     "enabled": true,
     "actions": {
       "source": {
