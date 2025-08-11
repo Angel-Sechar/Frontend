@@ -21,8 +21,8 @@
   },
   "lint-staged": {
     "*.{ts,js,html}": [
-      "bunx biome check",
-      "eslint --max-warnings=0 --debug"
+      "bunx biome check --",
+      "eslint --max-warnings=0 --debug --"
     ],
     "*.{json,scss,css}": [
       "biome format --write --no-errors-on-unmatched"
