@@ -32,7 +32,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "aap",
+            "prefix": "aaap",
             "style": "kebab-case"
           }
         ]
