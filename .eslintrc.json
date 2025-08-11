@@ -29,7 +29,7 @@
         ],
         "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
         "@angular-eslint/component-selector": [
-          "warn",
+          "error",
           {
             "type": "element",
             "prefix": "aaap",
