@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* If you are not using Tailwind via PostCSS, replace these with the compiled Tailwind CSS file import */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
