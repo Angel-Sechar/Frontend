@@ -1,14 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "dist",
-    "node_modules",
-    ".angular",
-    "coverage",
-    "*.spec.ts",
-    "vite.config.ts",
-    "*.config.js"
-  ],
+  "ignorePatterns": ["dist", "node_modules", ".angular", "coverage", "*.spec.ts", "vite.config.ts"],
   "overrides": [
     {
       "files": ["*.ts"],
