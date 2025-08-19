@@ -12,8 +12,8 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint --max-warnings=0 \"{src,apps,libs,test}/**/*.ts\" --debug",
     "lint:fix": "eslint --max-warnings=0 \"{src,apps,libs,test}/**/*.ts\" --debug --fix",
-    "format": "biome format --write .",
-    "format:check": "bunx biome check",
+    "format": "biome format check .",
+    "format:check": "bunx biome check . --verbose",
     "format:fix": "bunx biome format --write --no-errors-on-unmatched",
     "check": "bun run format:check && bun run lint",
     "check:fix": "bun run format:fix && bun run lint:fix",
@@ -21,7 +21,7 @@
   },
   "lint-staged": {
     "*.{ts,js,html}": [
-      "bunx biome check --",
+      "bunx biome check",
       "eslint --max-warnings=0"
     ],
     "*.{json,scss,css}": [
