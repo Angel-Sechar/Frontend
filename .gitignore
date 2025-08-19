@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Secured Socket Layer (SSL) files
+/nginx/ssl/*
