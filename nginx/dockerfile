@@ -1,21 +1,19 @@
-FROM nginx:alpine
+FROM fholzer/nginx-brotli:latest
 
-# Install Brotli module
-RUN apk add --no-cache nginx-mod-http-brotli
+# Install openssl
+RUN apk add --no-cache openssl
 
 # Remove default nginx config
 RUN rm -rf /etc/nginx/conf.d/*
 
 # Copy configurations
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY conf.d/ /etc/nginx/conf.d/
-COPY middleware/ /etc/nginx/middleware/
 COPY ssl/ /etc/nginx/ssl/
 
 # Create necessary directories
 RUN mkdir -p /var/cache/nginx/proxy && \
     mkdir -p /var/cache/nginx/fastcgi && \
-    mkdir -p /var/log/nginx &&
+    mkdir -p /var/log/nginx
 
 
 # Generate DH parameters 
@@ -27,5 +25,5 @@ RUN chown -R nginx:nginx /var/cache/nginx && \
     chmod -R 755 /usr/share/nginx/html
 
 EXPOSE 80 443
-
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx"]
+CMD ["-g", "daemon off;"]
