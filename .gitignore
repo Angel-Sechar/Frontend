@@ -43,3 +43,6 @@ Thumbs.db
 
 # Secured Socket Layer (SSL) files
 /nginx/ssl/*
+
+# Environment variables file
+/.env
