@@ -1,27 +1,27 @@
-FROM fholzer/nginx-brotli:latest
+FROM alpine:latest
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Install required packages
-RUN apk add --no-cache openssl curl
+RUN apk add busybox-openrc sudo
 
-# Remove default configs
-RUN rm -rf /etc/nginx/conf.d/*
+RUN apk add musl-dev gcc libffi-dev python3-dev
 
-# Create directories
-RUN mkdir -p /var/cache/nginx/proxy \
-    /var/log/nginx \
-    /etc/nginx/ssl \
-    /etc/nginx/cloudflare
+RUN apk add py3-pip && pip install --upgrade --break-system-packages pip
+RUN pip install --break-system-packages certbot certbot-dns-cloudflare
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY deploy.sh /deploy.sh
-# Generate DH parameters
-RUN openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
+RUN apk del musl-dev gcc libffi-dev python3-dev
 
-# Set permissions
-RUN chown -R nginx:nginx /var/cache/nginx /var/log/nginx
+RUN addgroup -S certbot -g 1000
+RUN adduser -SD certbot -h /etc/letsencrypt -u 1000 -G certbot
 
-EXPOSE 80 443
+RUN mkdir -p /var/log/letsencrypt /var/lib/letsencrypt /certs
 
-ENTRYPOINT [ "/deploy.sh" ]
-CMD ["-g", "daemon off;"]
+RUN chown -R certbot:certbot /etc/letsencrypt /var/lib/letsencrypt /var/log/letsencrypt /certs
+
+COPY renew.sh /renew.sh
+RUN chmod +x /renew.sh
+
+COPY crontab.conf /crontab.conf
+RUN crontab -u certbot /crontab.conf
+
+ENTRYPOINT ["/entrypoint.sh"]

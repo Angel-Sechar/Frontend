@@ -1,25 +1,27 @@
 #!/bin/sh
+
 set -e
 
-DOMAIN="${DOMAIN}"
-EMAIL="${CLOUDFLARE_EMAIL}"
+CLOUDFLARE_INI="/etc/letsencrypt/cloudflare.ini"
 
-echo "Checking SSL certificates for ${DOMAIN}..."
-if [ ! -f "/etc/letsencrypt/live/${DOMAIN}/fullchain.pem" ]; then
-    echo "Requesting new certificate via Cloudflare DNS..."
-    
-    certbot certonly --dns-cloudflare --dns-cloudflare-credentials /cloudflare/cloudflare.ini --email ${EMAIL} \
-        --agree-tos --no-eff-email --force-renewal -d ${DOMAIN} -d www.${DOMAIN}
-        
-    echo "Certificate obtained successfully!"
-else
-    echo "Certificate already exists for ${DOMAIN}"
-fi
+# Create cloudflare.ini with proper permissions
+echo "Cloudflare credentials file created at $CLOUDFLARE_INI"
+chmod 600 "$CLOUDFLARE_INI"
 
-# Auto-renewal loop
-echo "Starting auto-renewal loop..."
-while true; do
-    sleep 12h
-    echo "Checking for renewal..."
-    certbot renew --quiet --dns-cloudflare --dns-cloudflare-credentials /cloudflare/cloudflare.ini
-done
+# Test if domain exists in Cloudflare (optional debug step)
+echo "Testing Cloudflare API connection..."
+
+# Request certificate
+certbot certonly \
+  --verbose \
+  --debug \
+  --dns-cloudflare \
+  --dns-cloudflare-credentials /etc/letsencrypt/cloudflare.ini\
+  --dns-cloudflare-propagation-seconds 60 \
+  --email asv70537592@gmail.com \
+  --agree-tos \
+  --non-interactive \
+  --dry-run \
+  -d angeljsv.com
+
+echo "Certificate obtained successfully!"
