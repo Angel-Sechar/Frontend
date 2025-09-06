@@ -24,7 +24,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": ["app", "shared"],
             "style": "kebab-case"
           }
         ]
@@ -34,6 +34,19 @@
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
+    },
+    {
+      "files": ["src/app/features/auth/**"],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "auth",
+            "style": "kebab-case"
+          }
+        ]
+      }
     }
   ]
 }
