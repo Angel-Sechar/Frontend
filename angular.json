@@ -8,7 +8,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "campus-frontend": {
+    "campus-rent": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -22,7 +22,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/campus-frontend",
+            "outputPath": "dist/campus-rent",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -45,6 +45,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -72,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "campus-frontend:build:production"
+              "buildTarget": "campus-rent:build:production"
             },
             "development": {
-              "buildTarget": "campus-frontend:build:development"
+              "buildTarget": "campus-rent:build:development"
             }
           },
           "defaultConfiguration": "development"
