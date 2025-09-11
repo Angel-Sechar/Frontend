@@ -20,7 +20,7 @@
     "serve:ssr": "node dist/frontend/server/server.mjs"
   },
   "lint-staged": {
-    "*.{ts,js,html}": [
+    "*.{ts,js}": [
       "bunx biome check --verbose",
       "eslint --max-warnings=0"
     ],
