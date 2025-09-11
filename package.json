@@ -24,6 +24,9 @@
       "bunx biome check --verbose",
       "eslint --max-warnings=0"
     ],
+    "*.html": [
+      "eslint --max-warnings=0"
+    ],
     "*.{json,scss,css}": [
       "biome format --write --no-errors-on-unmatched"
     ]
