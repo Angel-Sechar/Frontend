@@ -1,5 +1,5 @@
 {
-  "name": "campus-frontend",
+  "name": "campus-rent",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -67,7 +67,7 @@
     "@biomejs/biome": "^2.1.4",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.11",
-    "@testing-library/angular": "^18.0.0",
+    "@testing-library/angular": "^17.0.0",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/user-event": "^14.6.1",
     "@types/express": "^4.17.17",
