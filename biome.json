@@ -36,7 +36,8 @@
       "quoteProperties": "asNeeded",
       "quoteStyle": "single",
       "semicolons": "always",
-      "trailingCommas": "es5"
+      "trailingCommas": "es5",
+      "lineEnding": "lf"
     },
     "parser": {
       "unsafeParameterDecoratorsEnabled": true
