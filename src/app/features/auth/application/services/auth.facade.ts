@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
+import { LoginUseCase } from '@auth/application/use-cases/auth-login.usecase';
+import { AuthToken } from '@auth/domain/models/auth-token.model';
 import { Observable } from 'rxjs';
-import { AuthToken } from '../../domain/models/auth-token.model';
-import { LoginUseCase } from '../use-cases/auth-login.usecase';
 
 @Injectable({ providedIn: 'root' })
 export class AuthFacade {

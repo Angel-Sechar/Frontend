@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { AuthToken } from '@auth/domain/models/auth-token.model';
+import { User } from '@auth/domain/models/auth-user.model';
+import { AuthRepository } from '@auth/domain/repositories/auth.repository';
+import { environment } from '@env/environment';
 import { Observable } from 'rxjs';
-import { environment } from '../../../../environments/environment';
-import { AuthToken } from '../domain/models/auth-token.model';
-import { User } from '../domain/models/auth-user.model';
-import { AuthRepository } from '../domain/repositories/auth.repository';
 
 @Injectable({ providedIn: 'root' })
 export class AuthHttpService implements AuthRepository {

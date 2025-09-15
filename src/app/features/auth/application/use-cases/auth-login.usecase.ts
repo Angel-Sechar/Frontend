@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
+import { AuthToken } from '@auth/domain/models/auth-token.model';
+import { AuthRepository } from '@auth/domain/repositories/auth.repository';
 import { Observable } from 'rxjs';
-import { AuthToken } from '../../domain/models/auth-token.model';
-import { AuthRepository } from '../../domain/repositories/auth.repository';
 
 @Injectable({ providedIn: 'root' })
 export class LoginUseCase {
