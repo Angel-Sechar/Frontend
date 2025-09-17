@@ -28,6 +28,15 @@
             "prefix": ["app"],
             "style": "kebab-case"
           }
+        ],
+        "object-curly-newline": [
+          "error",
+          {
+            "ImportDeclaration": {
+              "multiline": true,
+              "minProperties": 6
+            }
+          }
         ]
       }
     },
