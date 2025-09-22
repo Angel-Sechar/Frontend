@@ -28,7 +28,8 @@
       "@env/*": ["src/environments/*"],
       "@core/*": ["src/app/core/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@auth/*": ["src/app/features/auth/*"]
+      "@auth/*": ["src/app/features/auth/*"],
+      "@static/*": ["src/app/static/*"]
     },
     "forceConsistentCasingInFileNames": true
   },

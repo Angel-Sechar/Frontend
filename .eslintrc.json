@@ -37,7 +37,8 @@
               "minProperties": 6
             }
           }
-        ]
+        ],
+        "implicit-arrow-linebreak": "off"
       }
     },
     {
@@ -66,6 +67,19 @@
           {
             "type": "element",
             "prefix": "shared",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["src/app/static/**"],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "static",
             "style": "kebab-case"
           }
         ]

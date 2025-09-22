@@ -1,0 +1,9 @@
+@let emailLocal = email();
+
+<a
+  [attr.href]="'mailto:' + emailLocal"
+  class="text-blue-600 hover:underline font-medium"
+>
+  {{ emailLocal }}
+</a>
+  
