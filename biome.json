@@ -8,14 +8,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "*",
-      "**/*.{ts,js,json,css}",
-      "!**/*.html",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/node_modules/**"
-    ]
+    "includes": ["*", "**/*.{ts,js,json,css}", "!**/*.html", "!**/dist/**", "!**/build/**", "!**/node_modules/**"]
   },
   "formatter": {
     "enabled": true,
@@ -23,7 +16,7 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 100,
+    "lineWidth": 120,
     "attributePosition": "auto"
   },
   "javascript": {

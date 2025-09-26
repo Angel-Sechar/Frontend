@@ -1,0 +1,21 @@
+@let localControl = control();
+
+<label for="custom-input">Custom Input:</label>
+<input id="custom-input" [formControl]="localControl" (blur)="onTouched()" />
+ 
+@if(localControl.invalid && (localControl.dirty || localControl.touched)) {
+<div class="error-messages">
+  @if(localControl.errors?.['required']) {
+  <p>This field is required.</p>
+  }
+  @if(localControl.errors?.['minlength']) {
+    <p>Minimum length is @localControl.errors?.['minlength'].requiredLength characters.</p>
+    }
+    @if(localControl.errors?.['maxlength']) {
+    <p>Maximum length is @localControl.errors?.['maxlength'].requiredLength characters.</p>
+    }
+  @if(localControl.errors?.['pattern']) {
+      <p>Invalid format.</p>
+    }
+</div>
+}
