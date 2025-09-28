@@ -1,21 +1,46 @@
 @let localControl = control();
+@let localLabel = label();
+@let uniqueId = inputId();
+@let localType = type();
+@let localRequired = isRequired();
+@let localPlaceholder = placeholder();
+@let showErrors = localControl.invalid && (localControl.dirty || localControl.touched);
 
-<label for="custom-input">Custom Input:</label>
-<input id="custom-input" [formControl]="localControl" (blur)="onTouched()" />
- 
-@if(localControl.invalid && (localControl.dirty || localControl.touched)) {
-<div class="error-messages">
-  @if(localControl.errors?.['required']) {
-  <p>This field is required.</p>
+<label [for]="uniqueId">
+  {{ localLabel }}
+  @if (localRequired) {
+    <span aria-hidden="true">*</span>
+    <span class="sr-only">(required)</span>
   }
-  @if(localControl.errors?.['minlength']) {
-    <p>Minimum length is @localControl.errors?.['minlength'].requiredLength characters.</p>
+</label>
+<input
+  [id]="uniqueId"
+  [formControl]="localControl"
+  (blur)="onTouched()"
+  [type]="localType"
+  [required]="localRequired"
+  [placeholder]="localPlaceholder"
+  [attr.aria-required]="localRequired"
+  [attr.aria-invalid]="showErrors ? 'true' : 'false'"
+  [attr.aria-describedby]="showErrors ? uniqueId + '-errors' : null"
+/>
+
+@if (showErrors) {
+  <div [id]="uniqueId + '-errors'" role="alert" aria-live="polite">
+    @if (localControl.errors?.["required"]) {
+      <p>This field is required.</p>
     }
-    @if(localControl.errors?.['maxlength']) {
-    <p>Maximum length is @localControl.errors?.['maxlength'].requiredLength characters.</p>
+    @if (localControl.errors?.["minlength"]) {
+      <p>Minimum length is {{ localControl.errors?.["minlength"].requiredLength }} characters.</p>
     }
-  @if(localControl.errors?.['pattern']) {
+    @if (localControl.errors?.["maxlength"]) {
+      <p>Maximum length is {{ localControl.errors?.["maxlength"].requiredLength }} characters.</p>
+    }
+    @if (localControl.errors?.["email"]) {
+      <p>Please enter a valid email address.</p>
+    }
+    @if (localControl.errors?.["pattern"]) {
       <p>Invalid format.</p>
     }
-</div>
+  </div>
 }
