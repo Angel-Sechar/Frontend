@@ -23,7 +23,6 @@ export class IconService {
   }
 
   constructor() {
-    //test
     this.registerIcons();
   }
 }
