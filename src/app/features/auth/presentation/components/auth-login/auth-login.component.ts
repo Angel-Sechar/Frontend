@@ -12,4 +12,10 @@ import { LoginForm } from '@auth/presentation/types';
 })
 export class AuthLoginComponent {
   formGroup = input.required<FormGroup<LoginForm>>();
+
+  onSubmit() {}
+
+  loginWithGoogle() {}
+
+  loginWithFacebook() {}
 }

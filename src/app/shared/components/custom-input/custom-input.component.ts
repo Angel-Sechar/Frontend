@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { MatError } from '@angular/material/form-field';
 
 function hasRequiredValidator(control: FormControl): boolean {
   if (!control.validator) {
@@ -22,7 +23,7 @@ function hasRequiredValidator(control: FormControl): boolean {
 @Component({
   selector: 'shared-custom-input',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatError],
   templateUrl: './custom-input.component.html',
   providers: [
     {
@@ -38,7 +39,7 @@ export class CustomInputComponent implements ControlValueAccessor {
 
   control = input.required<FormControl<any>>();
 
-  label = input.required<string>();
+  label = input<string>('');
 
   callerName = input.required<string>();
 

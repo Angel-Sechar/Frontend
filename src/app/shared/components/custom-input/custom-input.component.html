@@ -5,11 +5,10 @@
 @let localRequired = isRequired();
 @let localPlaceholder = placeholder();
 @let showErrors = localControl.invalid && (localControl.dirty || localControl.touched);
-
-<label [for]="uniqueId">
-  {{ localLabel }}
-  @if (localRequired) {
-    <span aria-hidden="true">*</span>
+<label [for]="uniqueId" [class]="localLabel ? 'block text-sm font-medium text-gray-700 mb-2' : 'sr-only'">
+  {{ localLabel || localPlaceholder }}
+  @if (localRequired && localLabel) {
+    <span aria-hidden="true" class="text-red-500 ml-1">*</span>
     <span class="sr-only">(required)</span>
   }
 </label>
@@ -23,24 +22,30 @@
   [attr.aria-required]="localRequired"
   [attr.aria-invalid]="showErrors ? 'true' : 'false'"
   [attr.aria-describedby]="showErrors ? uniqueId + '-errors' : null"
+  class="input-base input-default"
+  [class.input-error]="showErrors"
 />
 
 @if (showErrors) {
   <div [id]="uniqueId + '-errors'" role="alert" aria-live="polite">
     @if (localControl.errors?.["required"]) {
-      <p>This field is required.</p>
+      <mat-error>This field is required.</mat-error>
     }
     @if (localControl.errors?.["minlength"]) {
-      <p>Minimum length is {{ localControl.errors?.["minlength"].requiredLength }} characters.</p>
+      <mat-error>
+        Minimum length is {{ localControl.errors?.["minlength"].requiredLength }} characters.
+      </mat-error>
     }
     @if (localControl.errors?.["maxlength"]) {
-      <p>Maximum length is {{ localControl.errors?.["maxlength"].requiredLength }} characters.</p>
+      <mat-error>
+        Maximum length is {{ localControl.errors?.["maxlength"].requiredLength }} characters.
+      </mat-error>
     }
     @if (localControl.errors?.["email"]) {
-      <p>Please enter a valid email address.</p>
+      <mat-error>Please enter a valid email address.</mat-error>
     }
     @if (localControl.errors?.["pattern"]) {
-      <p>Invalid format.</p>
+      <mat-error>Invalid format.</mat-error>
     }
   </div>
 }
