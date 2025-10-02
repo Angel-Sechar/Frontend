@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
-import { IconService } from './core/services/icon.service';
+import { IconService } from '@core/services/icon.service';
 
 @Component({
   selector: 'app-root',

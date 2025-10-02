@@ -9,10 +9,7 @@ export function logMethod(
     ...descriptor,
     value(...args: any[]) {
       const className = this.constructor.name;
-      console.log(
-        `Method '${propertyKey}' of class '${className}' is called with arguments:`,
-        args,
-      );
+      console.log(`Method '${propertyKey}' of class '${className}' is called with arguments:`, args);
       const result = originalMethod.apply(this, args);
       console.log(`Method '${propertyKey}' of class '${className}' returns:`, result);
       return result;
@@ -21,4 +18,4 @@ export function logMethod(
 
   return newDescriptor;
 }
-// TODO: Use the new decorator syntax when upgrading Angular version which supports it ClassMethodDecoratorContext
+// TODO: Change for new decorator syntax ClassMethodDecoratorContext (not supported in Angular 18)

@@ -10,6 +10,8 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatError } from '@angular/material/form-field';
+import { blockInvalidChars } from '@shared/helpers/form.helper';
+import { specialCharactersAllowed } from '@shared/validators/password.validator';
 
 function hasRequiredValidator(control: FormControl): boolean {
   if (!control.validator) {
@@ -54,6 +56,10 @@ export class CustomInputComponent implements ControlValueAccessor {
 
     return `input-${caller.toLowerCase()}-${this.uniqueSuffix}`;
   });
+
+  specialCharacters: string = specialCharactersAllowed;
+
+  blockInvalidChars = blockInvalidChars;
 
   // eslint-disable-next-line class-methods-use-this
   onTouched = () => {};
