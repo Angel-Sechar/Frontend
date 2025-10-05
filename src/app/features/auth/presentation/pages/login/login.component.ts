@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import { MatCard } from '@angular/material/card';
 import { strongPassword } from '@app/shared/validators/password.validator';
-import { AuthLoginFormComponent } from '@auth/presentation/components/auth-login/auth-login.component';
+import { AuthLoginFormComponent } from '@auth/presentation/components';
 import { LoginForm } from '@auth/presentation/types';
 
 @Component({
   selector: 'auth-login-page',
   standalone: true,
-  imports: [AuthLoginFormComponent],
+  imports: [AuthLoginFormComponent, MatCard],
   templateUrl: './login.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

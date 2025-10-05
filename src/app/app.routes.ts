@@ -16,7 +16,7 @@ export const routes: Routes = [
   {
     path: 'login',
     loadComponent: () =>
-      import('@auth/presentation/components/auth-login/auth-login.component').then(
+      import('@app/features/auth/presentation/components/auth-login-form/auth-login-form.component').then(
         (m) => m.AuthLoginFormComponent,
       ),
   },

@@ -26,9 +26,13 @@
       Iniciar sesión
     </button>
 
-    <a href="/forgot-password" class="mt-3 block text-center text-sm text-green-500 hover:underline">
+    <button
+      type="button"
+      (click)="onForgotPassword()"
+      class="mt-3 block w-full text-center text-sm text-green-500 hover:underline bg-transparent border-0 cursor-pointer"
+    >
       ¿Has olvidado la contraseña?
-    </a>
+    </button>
   </form>
 
   <!-- Divider -->
@@ -61,6 +65,12 @@
   <!-- Register Link -->
   <p class="mt-6 text-center text-sm text-gray-700">
     ¿No tienes una cuenta?
-    <a href="/register" class="font-bold text-green-500 hover:underline">Registrarse</a>
+    <button
+      type="button"
+      (click)="onNavigateToRegister()"
+      class="font-bold text-green-500 hover:underline inline bg-transparent border-none p-0 cursor-pointer"
+    >
+      Registrarse
+    </button>
   </p>
 </div>

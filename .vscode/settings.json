@@ -3,18 +3,8 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "css.validate": false,
-  "tailwindCSS.includeLanguages": {
-    "html": "html",
-    "javascript": "javascript",
-    "typescript": "typescript"
-  },
-  "tailwindCSS.emmetCompletions": true,
-  "editor.formatOnPaste": true,
   "biome.enable": true,
   "biome.configPath": "./biome.json",
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
@@ -31,5 +21,45 @@
     "editor.linkedEditing": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-  }
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "scss": "css",
+    "css": "css"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.validate": true,
+  "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.colorDecorators": true,
+  "cssPeek.supportTags": true,
+  "cssPeek.peekFromLanguages": [
+    "html",
+    "django-html",
+    "razor",
+    "javascript",
+    "typescript",
+    "HTML (Eex)",
+    "html-eex"
+  ],
+  "tailwindCSS.files.exclude": [],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "html.autoClosingTags": true,
+  "html.suggest.html5": true,
+  "css.completion.triggerPropertyValueCompletion": true,
+  "css.styleSheets": ["src/styles.scss", "src/styles/tailwind.scss", "src/**/*.scss"]
 }
