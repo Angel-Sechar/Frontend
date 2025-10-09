@@ -3,7 +3,7 @@ import { AUTH_PROVIDERS } from '@auth/infrastructure/providers';
 
 export const AuthRoutes: Routes = [
   {
-    path: 'ajsv',
+    path: '',
     pathMatch: 'prefix',
     providers: [...AUTH_PROVIDERS],
     children: [
