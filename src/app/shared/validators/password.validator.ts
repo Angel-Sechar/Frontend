@@ -1,5 +1,5 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
-import { escapeForRegex } from '@shared/utils/regex';
+import { escapeForRegex } from '@app/shared/utils/escape-for-regex';
 
 export const specialCharactersAllowed: string = '@$!#*?&._/+-=.';
 

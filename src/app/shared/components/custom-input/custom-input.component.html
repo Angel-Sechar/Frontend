@@ -30,40 +30,40 @@
 @if (showErrors) {
   <div [id]="uniqueId + '-errors'" role="alert" aria-live="polite">
     @if (localControl.errors?.["required"]) {
-      <mat-error>This field is required.</mat-error>
+      <mat-error>Este campo es requerido.</mat-error>
     }
     @if (localControl.errors?.["minlength"]) {
       <mat-error>
-        Minimum length is {{ localControl.errors?.["minlength"].requiredLength }} characters.
+        Mínima longitud es de {{ localControl.errors?.["minlength"].requiredLength }} caracteres.
       </mat-error>
     }
     @if (localControl.errors?.["maxlength"]) {
       <mat-error>
-        Maximum length is {{ localControl.errors?.["maxlength"].requiredLength }} characters.
+        Máxima longitud es de {{ localControl.errors?.["maxlength"].requiredLength }} caracteres.
       </mat-error>
     }
     @if (localControl.errors?.["email"]) {
-      <mat-error>Please enter a valid email address.</mat-error>
+      <mat-error>Por favor ingrese un correo electrónico válido.</mat-error>
     }
     @if (localControl.errors?.["pattern"]) {
-      <mat-error>Invalid format.</mat-error>
+      <mat-error>Formato inválido.</mat-error>
     }
     @if (localControl.errors?.["invalidCharacter"]) {
       <mat-error>
-        Only letters, numbers, and the following special characters are allowed: {{ specialCharacters }}
+        Sólo letras, números y los siguientes caracteres especiales están permitidos: {{ specialCharacters }}
       </mat-error>
     } @else {
       @if (localControl.errors?.["missingLowercase"]) {
-        <mat-error>At least one lowercase letter required.</mat-error>
+        <mat-error>Al menos una letra minúscula es requerida.</mat-error>
       }
       @if (localControl.errors?.["missingUppercase"]) {
-        <mat-error>At least one uppercase letter required.</mat-error>
+        <mat-error>Al menos una letra mayúscula es requerida.</mat-error>
       }
       @if (localControl.errors?.["missingNumber"]) {
-        <mat-error>At least one number required.</mat-error>
+        <mat-error>Al menos un número es requerido.</mat-error>
       }
       @if (localControl.errors?.["missingSpecial"]) {
-        <mat-error>At least one special character required ({{ specialCharacters }}).</mat-error>
+        <mat-error>Al menos un carácter especial es requerido ({{ specialCharacters }}).</mat-error>
       }
     }
   </div>

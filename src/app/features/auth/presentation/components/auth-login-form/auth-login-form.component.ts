@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CustomInputComponent } from '@app/shared/components';
+import { AuthLoginDto } from '@auth/application/dtos';
 import { LoginForm } from '@auth/presentation/types';
 
 @Component({
@@ -13,7 +14,7 @@ import { LoginForm } from '@auth/presentation/types';
 export class AuthLoginFormComponent {
   formGroup = input.required<FormGroup<LoginForm>>();
 
-  login = output<FormGroup<LoginForm>>();
+  login = output<AuthLoginDto>();
 
   googleLogin = output<void>();
 
@@ -23,10 +24,15 @@ export class AuthLoginFormComponent {
 
   forgotPassword = output<void>();
 
-  onSubmit() {
-    if (this.formGroup().valid) {
-      this.login.emit(this.formGroup());
+  onSubmit(): void {
+    const form = this.formGroup();
+
+    if (form.invalid) {
+      form.markAllAsTouched();
+      return;
     }
+
+    this.login.emit(form.getRawValue());
   }
 
   loginWithGoogle() {

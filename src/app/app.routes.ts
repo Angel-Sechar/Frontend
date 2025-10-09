@@ -2,23 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'privacy-policy',
-    loadComponent: () =>
-      import('@static/pages/privacy-policy/privacy-policy.component').then((m) => m.PrivacyPolicyComponent),
+    path: '',
+    pathMatch: 'full',
+    loadChildren: () => import('@static/static.routes').then((m) => m.StaticRoutes),
   },
   {
-    path: 'terms-of-service',
-    loadComponent: () =>
-      import('@static/pages/terms-of-service/terms-of-service.component').then(
-        (m) => m.TermsOfServiceComponent,
-      ),
-  },
-  {
-    path: 'login',
-    loadComponent: () =>
-      import('@app/features/auth/presentation/components/auth-login-form/auth-login-form.component').then(
-        (m) => m.AuthLoginFormComponent,
-      ),
+    path: 'auth',
+    pathMatch: 'prefix',
+    loadChildren: () => import('@auth/auth.routes').then((m) => m.AuthRoutes),
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

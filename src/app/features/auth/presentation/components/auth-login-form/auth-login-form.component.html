@@ -4,7 +4,7 @@
   <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()">
     <shared-custom-input
       [control]="formGroupLocal.controls.email"
-      formControlName="Email"
+      formControlName="email"
       callerName="auth-login"
       type="email"
       placeholder="Correo electrónico"
@@ -12,7 +12,7 @@
 
     <shared-custom-input
       [control]="formGroupLocal.controls.password"
-      formControlName="Password"
+      formControlName="password"
       callerName="auth-login"
       type="password"
       placeholder="Contraseña"

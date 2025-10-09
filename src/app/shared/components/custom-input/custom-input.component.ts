@@ -6,6 +6,7 @@ import {
   forwardRef,
   inject,
   input,
+  OnInit,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
@@ -36,7 +37,7 @@ function hasRequiredValidator(control: FormControl): boolean {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CustomInputComponent implements ControlValueAccessor {
+export class CustomInputComponent implements ControlValueAccessor, OnInit {
   private destroyRef = inject(DestroyRef);
 
   control = input.required<FormControl<any>>();
@@ -61,6 +62,12 @@ export class CustomInputComponent implements ControlValueAccessor {
 
   blockInvalidChars = blockInvalidChars;
 
+  ngOnInit(): void {
+    this.control()
+      .valueChanges.pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((value) => this.onChange(value));
+  }
+
   // eslint-disable-next-line class-methods-use-this
   onTouched = () => {};
 
@@ -75,7 +82,7 @@ export class CustomInputComponent implements ControlValueAccessor {
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
-    this.control().valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(fn);
+    // this.control().valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(fn);
   }
 
   registerOnTouched(fn: any): void {

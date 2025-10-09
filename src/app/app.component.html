@@ -1,5 +1,4 @@
 <div class="min-h-screen flex flex-col bg-gray-50">
-
   <mat-toolbar color="primary" class="px-6 flex justify-between">
     <span class="text-lg font-semibold cursor-pointer">CampusRent</span>
 
@@ -13,15 +12,19 @@
       <button mat-icon-button aria-label="Cart">
         <mat-icon>shopping_cart</mat-icon>
       </button>
-      <button mat-flat-button color="accent">Login</button>
+      <button mat-flat-button color="accent" routerLink="/auth/ajsv/login">Login</button>
     </div>
   </mat-toolbar>
 
   <!-- Hero Section -->
-  <section class="flex flex-col md:flex-row items-center justify-between flex-1 px-6 py-12 bg-white shadow-md">
+  <section
+    class="flex flex-col md:flex-row items-center justify-between flex-1 px-6 py-12 bg-white shadow-md"
+  >
     <div class="max-w-lg space-y-6">
       <h1 class="text-4xl font-bold text-gray-800">
-        Rent <span class="text-primary-600">Campuses</span> & Sports Gear Easily
+        Rent
+        <span class="text-primary-600">Campuses</span>
+        & Sports Gear Easily
       </h1>
       <p class="text-gray-600">
         Find the perfect campus for your event and rent sports products like footballs, basketballs, and more.
@@ -33,11 +36,7 @@
     </div>
 
     <div class="mt-8 md:mt-0 md:ml-8 flex justify-center w-full md:w-1/2">
-      <img
-        src=""
-        alt="Campus and sports"
-        class="rounded-xl shadow-lg"
-      />
+      <img src="" alt="Campus and sports" class="rounded-xl shadow-lg" />
     </div>
   </section>
 
@@ -61,6 +60,10 @@
       <p class="text-gray-600 mt-2">Reserve online with flexible scheduling that fits your needs.</p>
     </mat-card>
   </section>
+
+  <main class="flex-1">
+    <router-outlet></router-outlet>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-200 text-center py-6 mt-auto">

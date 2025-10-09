@@ -11,7 +11,6 @@ import { IconService } from '@core/services/icon.service';
   standalone: true,
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'campus-frontend';
