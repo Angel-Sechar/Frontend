@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 @layer components {
-  .auth-login-bg {
+  .auth-bg {
     @apply min-h-screen flex items-center justify-center bg-cover bg-center;
-    background-image: url("/assets/images/auth/volleyball-01.jpg");
+    background-blend-mode: darken;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  }
+
+  .auth-bg.login {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/images/auth/volleyball-01.jpg");
+  }
+
+  .auth-bg.register {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/images/auth/soccer-01.jpg");
   }
 }

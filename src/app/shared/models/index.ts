@@ -1,1 +1,1 @@
-export * from './custom-forms.model';
+export * from './constant.model';

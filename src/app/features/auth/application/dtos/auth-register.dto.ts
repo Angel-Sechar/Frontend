@@ -1,13 +1,13 @@
+import { DocumentFormType } from '@shared/types/document-form.type';
+
 export interface AuthRegisterDto {
+  documentType: DocumentFormType;
+  documentNumber: string;
+  names: string;
+  fatherLastName: string;
+  motherLastName: string;
+  birthDate: Date;
   email: string;
   password: string;
-  firstName: string;
-  lastName: string;
-  role?: string;
-  dni?: string;
-  birthDate?: Date;
-  gender?: string;
-  address?: string;
-  logoImg?: string;
-  phoneNumber?: string;
+  acceptTerms: boolean;
 }

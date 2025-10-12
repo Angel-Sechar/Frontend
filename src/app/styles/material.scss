@@ -1,1 +1,124 @@
 @use "@angular/material" as mat;
+
+/* ==========================================================================
+   1) Definir tema M3 personalizado
+   ========================================================================== */
+$my-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$blue-palette,
+      tertiary: mat.$magenta-palette,
+    ),
+    density: (
+      scale: -1,
+      // reduce padding and spacing globally
+    ),
+  )
+);
+
+/* ==========================================================================
+   2) Aplicar el tema globalmente
+   ========================================================================== */
+:root {
+  @include mat.all-component-themes($my-theme);
+}
+
+/* ==========================================================================
+   3) Personalización de campos de formulario (mat-form-field)
+   ========================================================================== */
+.mat-mdc-form-field {
+  /* Colores de etiquetas */
+  --mdc-floating-label-ink-color: #000;
+  --mdc-floating-label-floating-color: #000;
+
+  /* Fondo blanco */
+  --mdc-filled-text-field-container-color: #ffffff;
+  --mdc-outlined-text-field-container-color: #ffffff;
+
+  /* Texto y etiquetas en gris */
+  --mdc-filled-text-field-label-text-color: #374151;
+  --mdc-outlined-text-field-label-text-color: #374151;
+  --mdc-filled-text-field-input-text-color: #374151;
+  --mdc-outlined-text-field-input-text-color: #374151;
+
+  /* Borde azul oscuro */
+  --mdc-outlined-text-field-outline-color: #1e3a8a;
+  --mdc-outlined-text-field-hover-outline-color: #1e40af;
+  --mdc-outlined-text-field-focus-outline-color: #1d4ed8;
+}
+
+/* Tamaño del texto de error */
+.mat-mdc-form-field-error {
+  font-size: 0.75rem; // ~12px
+  line-height: 0.75rem;
+  line-break: auto;
+}
+
+/* Efecto de sombra al enfocar */
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper {
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.08);
+}
+
+/* ==========================================================================
+   4) Personalización de mat-select
+   ========================================================================== */
+.mat-mdc-select {
+  /* Fondo y texto coherente con los inputs */
+  --mdc-menu-item-label-text-color: #374151;
+  --mdc-menu-container-color: #ffffff;
+  --mdc-filled-text-field-container-color: #ffffff;
+  --mdc-outlined-text-field-container-color: #ffffff;
+
+  /* Bordes redondeados */
+  border-radius: 0.5rem;
+}
+
+/* Texto del valor seleccionado */
+/* Listado */
+.mat-mdc-select-value-text,
+.mat-mdc-option .mdc-list-item__primary-text {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Trigger (parte visible del select cerrado) */
+.mat-mdc-select-trigger {
+  padding: 0rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Panel desplegable */
+.mat-mdc-select-panel {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Opciones dentro del panel */
+.mat-mdc-option {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  line-height: 1.2;
+}
+
+.snackbar-warning {
+  background: #1e3a8a;
+  color: white;
+  font-weight: 500;
+}
+// date Picker
+.mat-datepicker-toggle-default-icon {
+  color: #1e3a8a;
+}
+.mat-mdc-datepicker-input {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}

@@ -1,0 +1,16 @@
+@let positionLocal = position();
+<button
+  mat-icon-button
+  color="primary"
+  (click)="navigate.emit(route())"
+  class="absolute top-6 z-20 flex items-center space-x-1 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow hover:bg-white transition"
+  [class.left-6]="positionLocal === 'left'"
+  [class.right-6]="positionLocal === 'right'"
+>
+  @if (positionLocal === "left") {
+    <mat-icon>arrow_back</mat-icon>
+  } @else if (positionLocal === "right") {
+    <mat-icon>arrow_forward</mat-icon>
+  }
+  <span class="hidden sm:inline font-semibold tracking-wide">{{ navigateLabel().toUpperCase() }}</span>
+</button>

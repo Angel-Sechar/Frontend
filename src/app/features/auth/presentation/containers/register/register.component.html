@@ -1,0 +1,15 @@
+<div class="auth-bg register">
+  <shared-button-navigate [route]="'/home'" [navigateLabel]="'Inicio'" (navigate)="onNavigate($event)" />
+  <shared-button-navigate
+    [route]="'/auth/login'"
+    [navigateLabel]="'Ingresar'"
+    [position]="'right'"
+    (navigate)="onNavigate($event)"
+  />
+
+  <auth-register-form
+    [formGroup]="form"
+    (register)="onRegister($event)"
+    [documentTypes]="getDocumentTypes()"
+  ></auth-register-form>
+</div>

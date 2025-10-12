@@ -1,14 +1,12 @@
-<div class="auth-login-bg">
-  <div class="absolute inset-0 bg-black/50"></div>
+<div class="auth-bg login">
+  <shared-button-navigate [route]="'/home'" [navigateLabel]="'Inicio'" (navigate)="onNavigate($event)" />
 
-  <mat-card class="relative z-10 w-full max-w-md">
-    <auth-login-form
-      [formGroup]="form"
-      (login)="onLogin($event)"
-      (googleLogin)="onGoogleLogin()"
-      (facebookLogin)="onFacebookLogin()"
-      (navigateToRegister)="onNavigateToRegister()"
-      (forgotPassword)="onForgotPassword()"
-    ></auth-login-form>
-  </mat-card>
+  <auth-login-form
+    [formGroup]="form"
+    (login)="onLogin($event)"
+    (googleLogin)="onGoogleLogin()"
+    (facebookLogin)="onFacebookLogin()"
+    (navigateToRegister)="onNavigateToRegister()"
+    (forgotPassword)="onForgotPassword()"
+  ></auth-login-form>
 </div>

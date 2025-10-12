@@ -5,6 +5,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideRouter, withComponentInputBinding, withDebugTracing } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 import { routes } from '@app/app.routes';
+import { MATERIAL_DATE_PROVIDERS } from '@core/config/date-format.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,5 +18,6 @@ export const appConfig: ApplicationConfig = {
       registrationStrategy: 'registerWhenStable:30000',
     }),
     provideExperimentalZonelessChangeDetection(),
+    MATERIAL_DATE_PROVIDERS,
   ],
 };

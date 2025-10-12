@@ -1,6 +1,6 @@
 {
-    "name": "campus rents",
-    "short_name": "campus",
+    "name": "Campus Rent Peru",
+    "short_name": "CampusRent",
     "description": "Rent sport fields and equipments to play many sports.",
     "start_url": "/",
     "scope": "/",
@@ -37,7 +37,7 @@
             "purpose": "maskable any"
         },
         {
-            "src": "/favicon.ico",
+            "src": "favicon.ico",
             "sizes": "64x64 32x32 24x24 16x16",
             "type": "image/x-icon",
             "purpose": "maskable any"

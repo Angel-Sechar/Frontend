@@ -17,7 +17,7 @@
     "format:fix": "bunx biome format --write --no-errors-on-unmatched",
     "check": "bun run format:check && bun run lint",
     "check:fix": "bun run format:fix && bun run lint:fix",
-    "serve:ssr": "node dist/frontend/server/server.mjs"
+    "serve:ssr": "node dist/campus-rent/server/server.mjs"
   },
   "lint-staged": {
     "*.{ts,js}": [
@@ -40,6 +40,7 @@
     "@angular/core": "^18.2.13",
     "@angular/forms": "^18.2.13",
     "@angular/material": "^18.2.13",
+    "@angular/material-moment-adapter": "18.2.14",
     "@angular/platform-browser": "^18.2.13",
     "@angular/platform-browser-dynamic": "^18.2.13",
     "@angular/platform-server": "^18.2.13",
@@ -49,6 +50,7 @@
     "express": "^4.18.2",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
+    "moment": "^2.30.1",
     "rxjs": "^7.8.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

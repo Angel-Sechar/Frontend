@@ -1,11 +1,6 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
-import { escapeForRegex } from '@app/shared/utils/escape-for-regex';
-
-export const specialCharactersAllowed: string = '@$!#*?&._/+-=.';
-
-export const REGEX_WHITELIST: RegExp = new RegExp(
-  `^[A-Za-z0-9${escapeForRegex(specialCharactersAllowed)}]+$`,
-);
+import { REGEX_PASSWORD, specialCharactersAllowed } from '@shared/helpers/regex-form.helper';
+import { escapeForRegex } from '@shared/utils/escape-for-regex';
 
 const REGEX_SPECIAL = new RegExp(`[${escapeForRegex(specialCharactersAllowed)}]`);
 
@@ -15,7 +10,7 @@ export function strongPassword(control: AbstractControl): ValidationErrors | nul
 
   const errors: ValidationErrors = {};
 
-  if (!REGEX_WHITELIST.test(value)) {
+  if (!REGEX_PASSWORD.test(value)) {
     errors['invalidCharacter'] = true;
   }
 
