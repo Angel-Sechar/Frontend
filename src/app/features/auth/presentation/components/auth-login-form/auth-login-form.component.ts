@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatCard } from '@angular/material/card';
+import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
 import { CustomInputComponent } from '@app/shared/components';
 import { AuthLoginDto } from '@auth/application/dtos';
 import { LoginForm } from '@auth/presentation/types';
@@ -8,7 +8,7 @@ import { LoginForm } from '@auth/presentation/types';
 @Component({
   selector: 'auth-login-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CustomInputComponent, MatCard],
+  imports: [ReactiveFormsModule, CustomInputComponent, MatCard, MatCardHeader, MatCardTitle, MatCardContent],
   templateUrl: './auth-login-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

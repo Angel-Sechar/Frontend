@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatCard } from '@angular/material/card';
+import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
 import { MatNativeDateModule, MatOption } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +26,9 @@ import { ConstantModel } from '@shared/models';
     MatNativeDateModule,
     NoPasteDirective,
     MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardContent,
   ],
   templateUrl: './auth-register-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

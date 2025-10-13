@@ -1,79 +1,75 @@
 @let formGroupLocal = formGroup();
 <div class="relative z-10 flex items-center justify-center w-full">
-  <mat-card class="relative z-10 w-full max-w-md mx-auto rounded-xl border-2 border-blue-300 bg-white p-8">
-    <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()">
-      <shared-custom-input
-        [control]="formGroupLocal.controls.email"
-        callerName="auth-login"
-        type="email"
-        label="Correo electrónico"
-        [noPaste]="true"
-      />
+  <mat-card class="auth-card-form max-w-md">
+    <mat-card-header class="justify-center">
+      <mat-card-title class="auth-form-title">Iniciar sesión</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()">
+        <shared-custom-input
+          [control]="formGroupLocal.controls.email"
+          callerName="auth-login"
+          type="email"
+          label="Correo electrónico"
+          [noPaste]="true"
+        />
 
-      <shared-custom-input
-        [control]="formGroupLocal.controls.password"
-        callerName="auth-login"
-        label="Contraseña"
-        type="password"
-        [noPaste]="true"
-        regexValidator="password"
-      />
+        <shared-custom-input
+          [control]="formGroupLocal.controls.password"
+          callerName="auth-login"
+          label="Contraseña"
+          type="password"
+          [noPaste]="true"
+          regexValidator="password"
+        />
 
-      <button
-        type="submit"
-        [disabled]="formGroupLocal.invalid"
-        class="w-full rounded-xl bg-green-400 py-4 text-xl font-bold text-white hover:bg-green-500 disabled:opacity-50"
-      >
-        Iniciar sesión
+        <button
+          type="submit"
+          [disabled]="formGroupLocal.invalid"
+          class="rounded-xl bg-green-400 py-4 text-xl font-bold text-white hover:bg-green-500 disabled:opacity-50"
+        >
+          Iniciar sesión
+        </button>
+
+        <button
+          type="button"
+          (click)="onForgotPassword()"
+          class="mt-3 block text-center text-sm text-green-500 hover:underline bg-transparent border-0 cursor-pointer"
+        >
+          ¿Has olvidado la contraseña?
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="my-6 flex items-center">
+        <div class="flex-grow border-t border-gray-300"></div>
+        <span class="mx-4 text-gray-500">O</span>
+        <div class="flex-grow border-t border-gray-300"></div>
+      </div>
+
+      <!-- Google Button -->
+      <button type="button" (click)="loginWithGoogle()" class="auth-btn-login">
+        <img src="assets/icons/logos/google/g.webp" alt="Google" class="h-6 w-6" />
+        <span>Continuar con Google</span>
       </button>
 
-      <button
-        type="button"
-        (click)="onForgotPassword()"
-        class="mt-3 block w-full text-center text-sm text-green-500 hover:underline bg-transparent border-0 cursor-pointer"
-      >
-        ¿Has olvidado la contraseña?
+      <!-- Facebook Button -->
+      <button type="button" (click)="loginWithFacebook()" [disabled]="true" class="auth-btn-login">
+        <img src="assets/icons/logos/facebook/f.png" alt="Facebook" class="h-6 w-6" />
+        <span>Continuar con Facebook</span>
       </button>
-    </form>
 
-    <!-- Divider -->
-    <div class="my-6 flex items-center">
-      <div class="flex-grow border-t border-gray-300"></div>
-      <span class="mx-4 text-gray-500">O</span>
-      <div class="flex-grow border-t border-gray-300"></div>
-    </div>
-
-    <!-- Google Button -->
-    <button
-      type="button"
-      (click)="loginWithGoogle()"
-      class="mb-3 flex w-full items-center justify-center gap-3 rounded-xl border border-gray-300 bg-white py-3 text-gray-700 hover:bg-gray-50"
-    >
-      <img src="assets/icons/logos/google/g.webp" alt="Google" class="h-6 w-6" />
-      <span>Continuar con Google</span>
-    </button>
-
-    <!-- Facebook Button -->
-    <button
-      type="button"
-      (click)="loginWithFacebook()"
-      [disabled]="true"
-      class="flex w-full items-center justify-center gap-3 rounded-xl border border-gray-300 bg-white py-3 text-gray-700 hover:bg-gray-50"
-    >
-      <img src="assets/icons/logos/facebook/f.png" alt="Facebook" class="h-6 w-6" />
-      <span>Continuar con Facebook</span>
-    </button>
-
-    <!-- Register Link -->
-    <p class="mt-6 text-center text-sm text-gray-700">
-      ¿No tienes una cuenta?
-      <button
-        type="button"
-        (click)="onNavigateToRegister()"
-        class="font-bold text-green-500 hover:underline inline bg-transparent border-none p-0 cursor-pointer my-3"
-      >
-        Registrarse
-      </button>
-    </p>
+      <!-- Register Link -->
+      <p class="mt-6 text-center text-sm text-gray-700">
+        ¿No tienes una cuenta?
+        <button
+          type="button"
+          (click)="onNavigateToRegister()"
+          class="font-bold text-green-500 hover:underline inline bg-transparent border-none p-0 cursor-pointer my-3"
+        >
+          Registrarse
+        </button>
+      </p>
+    </mat-card-content>
   </mat-card>
 </div>

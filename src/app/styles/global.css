@@ -1,0 +1,18 @@
+/* 
+  Force all direct child elements of the <form> to take full width.
+
+  Why:
+  - Some Angular Material components (like mat-form-field) or custom inputs
+    don’t naturally expand to fill their grid cell — they size themselves
+    based on their internal content.
+  - This rule ensures consistency: every input, button, or custom component
+    inside the form stretches to 100% of its grid column width.
+
+  Scope:
+  - The `> *` selector applies only to direct children of <form>, 
+    so nested elements aren’t affected.
+  - It helps prevent layout issues when using grid or flex layouts.
+*/
+form > * {
+  @apply w-full;
+}
