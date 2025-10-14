@@ -37,6 +37,31 @@
           }
         }
       }
+    },
+    {
+      "type": "java (build)",
+      "paths": ["${workspace}"],
+      "isFullBuild": true,
+      "group": "build",
+      "problemMatcher": [],
+      "label": "java (build): Build Workspace",
+      "detail": "$(tools) Build all the Java projects in workspace."
+    },
+    {
+      "label": "bun: start",
+      "type": "shell",
+      "command": "bun run start",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "."
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*Application bundle generation complete.*"
+        }
+      }
     }
   ]
 }

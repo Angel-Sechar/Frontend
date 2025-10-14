@@ -1,8 +1,8 @@
 import { FormControl } from '@angular/forms';
-import { DocumentFormType } from '@shared/types/document-form.type';
+import { ConstantModel } from '@shared/models';
 
 export interface RegisterForm {
-  documentType: FormControl<DocumentFormType>;
+  documentType: FormControl<ConstantModel>;
   documentNumber: FormControl<string>;
   names: FormControl<string>;
   fatherLastName: FormControl<string>;

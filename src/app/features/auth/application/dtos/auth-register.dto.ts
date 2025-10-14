@@ -1,7 +1,7 @@
-import { DocumentFormType } from '@shared/types/document-form.type';
+import { ConstantModel } from '@shared/models';
 
 export interface AuthRegisterDto {
-  documentType: DocumentFormType;
+  documentType: ConstantModel;
   documentNumber: string;
   names: string;
   fatherLastName: string;

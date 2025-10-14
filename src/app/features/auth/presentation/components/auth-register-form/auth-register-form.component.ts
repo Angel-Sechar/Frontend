@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatOption } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,7 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { NoPasteDirective } from '@app/shared/directives/no-paste.directive';
 import { AuthRegisterDto } from '@auth/application/dtos';
 import { RegisterForm } from '@auth/presentation/types';
-import { CustomInputComponent } from '@shared/components';
+import { CustomInputComponent, TextNavigateComponent } from '@shared/components';
 import { ConstantModel } from '@shared/models';
 
 @Component({
@@ -29,16 +30,24 @@ import { ConstantModel } from '@shared/models';
     MatCardHeader,
     MatCardTitle,
     MatCardContent,
+    MatCheckboxModule,
+    TextNavigateComponent,
   ],
   templateUrl: './auth-register-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthRegisterFormComponent {
+export class AuthRegisterFormComponent implements OnInit {
   formGroup = input.required<FormGroup<RegisterForm>>();
 
   documentTypes = input.required<ConstantModel[]>();
 
   register = output<AuthRegisterDto>();
+
+  documentTypesLocal: ConstantModel[] = [];
+
+  ngOnInit(): void {
+    this.documentTypesLocal = [...this.documentTypes()];
+  }
 
   onSubmit(): void {
     const form = this.formGroup();

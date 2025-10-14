@@ -78,9 +78,7 @@ $my-theme: mat.define-theme(
 /* Listado */
 .mat-mdc-select-value-text,
 .mat-mdc-option .mdc-list-item__primary-text {
-  font-size: 0.9rem !important;
-  font-weight: 500;
-  color: #374151;
+  font-size: 1rem !important;
 }
 
 /* Trigger (parte visible del select cerrado) */
@@ -88,7 +86,6 @@ $my-theme: mat.define-theme(
   padding: 0rem 0.75rem;
   font-size: 0.9rem;
 }
-
 /* Panel desplegable */
 .mat-mdc-select-panel {
   padding-top: 0.25rem;
@@ -100,20 +97,23 @@ $my-theme: mat.define-theme(
 /* Opciones dentro del panel */
 .mat-mdc-option {
   padding: 0.25rem 0.75rem;
-  font-size: 0.9rem;
-  color: #374151;
+  font-size: 1rem;
 }
 
 .mat-mdc-option .mdc-list-item__primary-text {
   line-height: 1.2;
 }
 
+.mat-mdc-select-placeholder {
+  font-size: 1rem !important;
+}
+/* Snackbar */
 .snackbar-warning {
   background: #1e3a8a;
   color: white;
   font-weight: 500;
 }
-// date Picker
+/* DatePicker*/
 .mat-datepicker-toggle-default-icon {
   color: #1e3a8a;
 }

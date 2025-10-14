@@ -29,4 +29,11 @@
   .auth-card-form {
     @apply relative z-10 w-full  mx-auto rounded-xl border-2 border-blue-300 bg-white p-8;
   }
+
+  .form-field-size-sm {
+    @apply flex-grow min-w-32 max-w-64;
+  }
+  .form-field-size-lg {
+    @apply flex-grow min-w-32 w-full;
+  }
 }

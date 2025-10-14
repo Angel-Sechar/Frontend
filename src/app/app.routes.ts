@@ -11,8 +11,8 @@ export const routes: Routes = [
     loadComponent: () => import('@app/features/home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: '',
-    pathMatch: 'full',
+    path: 'stc',
+    pathMatch: 'prefix',
     loadChildren: () => import('@static/static.routes').then((m) => m.StaticRoutes),
   },
   {

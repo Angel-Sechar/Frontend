@@ -6,19 +6,22 @@
     </mat-card-header>
     <mat-card-content>
       <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()" class="flex flex-wrap gap-x-8">
-        <mat-form-field>
+        <mat-form-field class="form-field-size-sm">
           <mat-select
+            class="form-field-size-sm"
             [required]="true"
             formControlName="documentType"
             placeholder="Tipo de documento"
             maxlength="12"
           >
-            @for (option of documentTypes(); track option.value) {
-              <mat-option [value]="option.value">{{ option.description }}</mat-option>
+            @for (option of documentTypesLocal; track option.value) {
+              <mat-option [value]="option">{{ option.description }}</mat-option>
             }
           </mat-select>
         </mat-form-field>
+
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.documentNumber"
           callerName="auth-register"
           type="text"
@@ -28,6 +31,7 @@
         />
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.names"
           callerName="auth-register"
           type="text"
@@ -36,6 +40,7 @@
         />
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.fatherLastName"
           callerName="auth-register"
           type="text"
@@ -44,6 +49,7 @@
         />
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.motherLastName"
           callerName="auth-register"
           type="text"
@@ -52,6 +58,7 @@
         />
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.birthDate"
           callerName="auth-register"
           type="date"
@@ -62,6 +69,7 @@
 
         <div>
           <shared-custom-input
+            class="form-field-size-lg"
             [control]="formGroupLocal.controls.email"
             callerName="auth-register"
             type="email"
@@ -71,6 +79,7 @@
         </div>
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.password"
           callerName="auth-register"
           type="password"
@@ -80,6 +89,7 @@
         />
 
         <shared-custom-input
+          class="form-field-size-sm"
           [control]="formGroupLocal.controls.repeatPassword"
           callerName="auth-register"
           type="password"
@@ -88,7 +98,7 @@
           regexValidator="password"
         />
 
-        <div class="">
+        <div class="form-field-size-lg">
           <button
             type="submit"
             [disabled]="formGroupLocal.invalid"
@@ -97,13 +107,16 @@
             Registrarse
           </button>
         </div>
-
-        <div class="md:col-span-2">
-          <shared-custom-input
-            [control]="formGroupLocal.controls.acceptTerms"
-            callerName="auth-register"
-            type="boolean"
-          />
+        <div class="form-field-size-lg items-start gap-y-6">
+          <mat-checkbox [formControl]="formGroupLocal.controls.acceptTerms">
+            <span class="text-sm text-gray-700">
+              Acepto los
+              <shared-text-navigate [text]="'términos y condiciones'" [route]="'/stc/terms-of-service'" />
+              y la
+              <shared-text-navigate [text]="'política de privacidad'" [route]="'/stc/privacy-policy'" />
+              .
+            </span>
+          </mat-checkbox>
         </div>
       </form>
     </mat-card-content>
