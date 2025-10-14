@@ -8,7 +8,6 @@
       <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()" class="flex flex-wrap gap-x-8">
         <mat-form-field class="form-field-size-sm">
           <mat-select
-            class="form-field-size-sm"
             [required]="true"
             formControlName="documentType"
             placeholder="Tipo de documento"
@@ -108,7 +107,7 @@
           </button>
         </div>
         <div class="form-field-size-lg items-start gap-y-6">
-          <mat-checkbox [formControl]="formGroupLocal.controls.acceptTerms">
+          <mat-checkbox [formControl]="formGroupLocal.controls.acceptTerms" class="">
             <span class="text-sm text-gray-700">
               Acepto los
               <shared-text-navigate [text]="'términos y condiciones'" [route]="'/stc/terms-of-service'" />

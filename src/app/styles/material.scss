@@ -50,7 +50,7 @@ $my-theme: mat.define-theme(
 
 /* Tamaño del texto de error */
 .mat-mdc-form-field-error {
-  font-size: 0.75rem; // ~12px
+  font-size: 0.75rem;
   line-height: 0.75rem;
   line-break: auto;
 }
@@ -113,16 +113,49 @@ $my-theme: mat.define-theme(
   color: white;
   font-weight: 500;
 }
-/* DatePicker*/
-.mat-datepicker-toggle-default-icon {
-  color: #1e3a8a;
-}
-.mat-mdc-datepicker-input {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #374151;
-}
-
 mat-card-header {
   margin-bottom: 1rem;
+}
+/* Checkbox personalizado - términos y condiciones */
+.mat-mdc-checkbox {
+  /* Estado unchecked */
+  --mdc-checkbox-unselected-icon-color: #1e3a8a;
+  --mdc-checkbox-unselected-hover-icon-color: #1e40af;
+  --mdc-checkbox-unselected-focus-icon-color: #1d4ed8;
+
+  /* Estado checked */
+  --mdc-checkbox-selected-icon-color: #ffffff;
+  --mdc-checkbox-selected-hover-icon-color: #f9fafb;
+  --mdc-checkbox-selected-focus-icon-color: #ffffff;
+  --mdc-checkbox-selected-pressed-icon-color: #e5e7eb;
+
+  /* Color del checkmark */
+  --mdc-checkbox-selected-checkmark-color: #1e3a8a;
+
+  /* Ripple effect */
+  .mat-ripple-element {
+    background-color: rgba(30, 58, 138, 0.1) !important;
+  }
+}
+
+/* Estado checked: borde azul visible */
+.mat-mdc-checkbox-checked {
+  .mdc-checkbox__background {
+    background-color: #ffffff !important;
+    border: 2px solid #1e3a8a !important;
+  }
+}
+
+/* Focus visible para accesibilidad */
+.mat-mdc-checkbox.cdk-keyboard-focused {
+  .mdc-checkbox__background {
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+  }
+}
+
+/* Hover effect */
+.mat-mdc-checkbox:hover {
+  .mdc-checkbox__background {
+    transition: all 0.2s ease;
+  }
 }
