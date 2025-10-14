@@ -19,6 +19,11 @@ export const StaticRoutes: Routes = [
             (m) => m.TermsOfServiceComponent,
           ),
       },
+      {
+        path: 'in-building',
+        loadComponent: () =>
+          import('@static/pages/in-building/in-building.component').then((m) => m.InBuildingComponent),
+      },
     ],
   },
 ];

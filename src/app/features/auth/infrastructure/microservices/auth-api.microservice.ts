@@ -6,7 +6,7 @@ import { AuthUserRepository } from '@auth/domain/repositories/auth-user.reposito
 import { environment } from '@env/environment';
 import { Observable } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'any' })
 export class AuthHttpMicroservice implements AuthUserRepository {
   private http = inject(HttpClient);
 

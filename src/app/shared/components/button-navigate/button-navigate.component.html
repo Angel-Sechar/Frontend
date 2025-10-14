@@ -2,7 +2,7 @@
 <button
   mat-icon-button
   color="primary"
-  (click)="navigate.emit(route())"
+  (click)="onNavigateTo()"
   class="absolute top-6 z-20 flex items-center space-x-1 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow hover:bg-white transition"
   [class.left-6]="positionLocal === 'left'"
   [class.right-6]="positionLocal === 'right'"

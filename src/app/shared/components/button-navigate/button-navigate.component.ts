@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, InputSignal, inject, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, InputSignal, inject, input } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { HorizontalPositionType } from '@shared/types';
@@ -19,9 +19,7 @@ export class ButtonNavigateComponent {
 
   position: InputSignal<HorizontalPositionType> = input<HorizontalPositionType>('left');
 
-  navigate = output<string>();
-
   onNavigateTo(): void {
-    this.navigate.emit(this.route());
+    this.router.navigate([this.route()]);
   }
 }
