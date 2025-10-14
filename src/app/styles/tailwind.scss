@@ -30,6 +30,6 @@
     @apply flex-grow min-w-32 max-w-64;
   }
   .form-field-size-lg {
-    @apply flex-grow min-w-32 w-full;
+    @apply flex-grow min-w-32 max-w-xl;
   }
 }

@@ -5,7 +5,7 @@
       <mat-card-title class="auth-form-title">Registrarse</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()" class="flex flex-wrap gap-x-8">
+      <form [formGroup]="formGroupLocal" (ngSubmit)="onSubmit()" class="flex flex-wrap gap-x-16">
         <mat-form-field class="form-field-size-sm">
           <mat-select
             [required]="true"
@@ -66,16 +66,14 @@
           regexValidator="date"
         />
 
-        <div>
-          <shared-custom-input
-            class="form-field-size-lg"
-            [control]="formGroupLocal.controls.email"
-            callerName="auth-register"
-            type="email"
-            label="Correo electrónico"
-            [noPaste]="true"
-          />
-        </div>
+        <shared-custom-input
+          class="form-field-size-lg"
+          [control]="formGroupLocal.controls.email"
+          callerName="auth-register"
+          type="email"
+          label="Correo electrónico"
+          [noPaste]="true"
+        />
 
         <shared-custom-input
           class="form-field-size-sm"
