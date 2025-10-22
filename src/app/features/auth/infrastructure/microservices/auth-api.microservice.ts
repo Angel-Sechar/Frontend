@@ -13,10 +13,10 @@ export class AuthHttpMicroservice implements AuthUserRepository {
   private authBaseUrl = `${environment.apiGatewayUrl}/auth`;
 
   login(authLogin: AuthLoginDto): Observable<AuthUser> {
-    return this.http.post<AuthUser>(`${this.authBaseUrl}/login`, authLogin);
+    return this.http.post<AuthUser>(`${this.authBaseUrl}/login`, authLogin, { withCredentials: true });
   }
 
   register(authRegister: AuthRegisterDto): Observable<AuthUser> {
-    return this.http.post<AuthUser>(`${this.authBaseUrl}/register`, authRegister);
+    return this.http.post<AuthUser>(`${this.authBaseUrl}/register`, authRegister, { withCredentials: true });
   }
 }
