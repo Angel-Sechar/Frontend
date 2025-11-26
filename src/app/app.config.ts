@@ -1,5 +1,10 @@
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ApplicationConfig, isDevMode, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import {
+  APP_ID,
+  ApplicationConfig,
+  isDevMode,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter, withComponentInputBinding, withDebugTracing } from '@angular/router';
@@ -9,6 +14,7 @@ import { MATERIAL_DATE_PROVIDERS } from '@core/config/date-format.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    { provide: APP_ID, useValue: 'campus-rent' },
     provideRouter(routes, withComponentInputBinding(), withDebugTracing()),
     provideHttpClient(withFetch()),
     provideClientHydration(),
