@@ -5,13 +5,13 @@
       "name": "campus-rent",
       "dependencies": {
         "@angular/animations": "^19.2.15",
-        "@angular/cdk": "^18.2.13",
+        "@angular/cdk": "^19.2.19",
         "@angular/common": "^19.2.15",
         "@angular/compiler": "^19.2.15",
         "@angular/core": "^19.2.15",
         "@angular/forms": "^19.2.15",
-        "@angular/material": "^18.2.13",
-        "@angular/material-moment-adapter": "18.2.14",
+        "@angular/material": "^19.2.19",
+        "@angular/material-moment-adapter": "19.2.19",
         "@angular/platform-browser": "^19.2.15",
         "@angular/platform-browser-dynamic": "^19.2.15",
         "@angular/platform-server": "^19.2.15",
@@ -111,7 +111,7 @@
 
     "@angular/build": ["@angular/build@18.2.21", "", { "dependencies": { "@ampproject/remapping": "2.3.0", "@angular-devkit/architect": "0.1802.21", "@babel/core": "7.25.2", "@babel/helper-annotate-as-pure": "7.24.7", "@babel/helper-split-export-declaration": "7.24.7", "@babel/plugin-syntax-import-attributes": "7.24.7", "@inquirer/confirm": "3.1.22", "@vitejs/plugin-basic-ssl": "1.1.0", "browserslist": "^4.23.0", "critters": "0.0.24", "esbuild": "0.23.0", "fast-glob": "3.3.2", "https-proxy-agent": "7.0.5", "listr2": "8.2.4", "lmdb": "3.0.13", "magic-string": "0.30.11", "mrmime": "2.0.0", "parse5-html-rewriting-stream": "7.0.0", "picomatch": "4.0.2", "piscina": "4.6.1", "rollup": "4.22.4", "sass": "1.77.6", "semver": "7.6.3", "vite": "~5.4.17", "watchpack": "2.4.1" }, "peerDependencies": { "@angular/compiler-cli": "^18.0.0", "@angular/localize": "^18.0.0", "@angular/platform-server": "^18.0.0", "@angular/service-worker": "^18.0.0", "less": "^4.2.0", "postcss": "^8.4.0", "tailwindcss": "^2.0.0 || ^3.0.0", "typescript": ">=5.4 <5.6" }, "optionalPeers": ["@angular/localize"] }, "sha512-uvq3qP4cByJrUkV1ri0v3x6LxOFt4fDKiQdNwbQAqdxtfRs3ssEIoCGns4t89sTWXv6VZWBNDcDIKK9/Fa9mmg=="],
 
-    "@angular/cdk": ["@angular/cdk@18.2.14", "", { "dependencies": { "tslib": "^2.3.0" }, "optionalDependencies": { "parse5": "^7.1.2" }, "peerDependencies": { "@angular/common": "^18.0.0 || ^19.0.0", "@angular/core": "^18.0.0 || ^19.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-vDyOh1lwjfVk9OqoroZAP8pf3xxKUvyl+TVR8nJxL4c5fOfUFkD7l94HaanqKSRwJcI2xiztuu92IVoHn8T33Q=="],
+    "@angular/cdk": ["@angular/cdk@19.2.19", "", { "dependencies": { "parse5": "^7.1.2", "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "^19.0.0 || ^20.0.0", "@angular/core": "^19.0.0 || ^20.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-PCpJagurPBqciqcq4Z8+3OtKLb7rSl4w/qBJoIMua8CgnrjvA1i+SWawhdtfI1zlY8FSwhzLwXV0CmWWfFzQPg=="],
 
     "@angular/cli": ["@angular/cli@19.2.19", "", { "dependencies": { "@angular-devkit/architect": "0.1902.19", "@angular-devkit/core": "19.2.19", "@angular-devkit/schematics": "19.2.19", "@inquirer/prompts": "7.3.2", "@listr2/prompt-adapter-inquirer": "2.0.18", "@schematics/angular": "19.2.19", "@yarnpkg/lockfile": "1.1.0", "ini": "5.0.0", "jsonc-parser": "3.3.1", "listr2": "8.2.5", "npm-package-arg": "12.0.2", "npm-pick-manifest": "10.0.0", "pacote": "20.0.0", "resolve": "1.22.10", "semver": "7.7.1", "symbol-observable": "4.0.0", "yargs": "17.7.2" }, "bin": { "ng": "bin/ng.js" } }, "sha512-e9tAzFNOL4mMWfMnpC9Up83OCTOp2siIj8W41FCp8jfoEnw79AXDDLh3d70kOayiObchksTJVShslTogLUyhMw=="],
 
@@ -127,9 +127,9 @@
 
     "@angular/language-service": ["@angular/language-service@20.3.2", "", {}, "sha512-a4/GTOo95rzTvOWXujLgQ+LDoApb5gwwbdoQZlC5xRDSnmyH3XFZYrlDWXB26wtdjo2JnGMWVWNhekxsAJImVw=="],
 
-    "@angular/material": ["@angular/material@18.2.14", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "^18.0.0 || ^19.0.0", "@angular/cdk": "18.2.14", "@angular/common": "^18.0.0 || ^19.0.0", "@angular/core": "^18.0.0 || ^19.0.0", "@angular/forms": "^18.0.0 || ^19.0.0", "@angular/platform-browser": "^18.0.0 || ^19.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-28pxzJP49Mymt664WnCtPkKeg7kXUsQKTKGf/Kl95rNTEdTJLbnlcc8wV0rT0yQNR7kXgpfBnG7h0ETLv/iu5Q=="],
+    "@angular/material": ["@angular/material@19.2.19", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/cdk": "19.2.19", "@angular/common": "^19.0.0 || ^20.0.0", "@angular/core": "^19.0.0 || ^20.0.0", "@angular/forms": "^19.0.0 || ^20.0.0", "@angular/platform-browser": "^19.0.0 || ^20.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-auIE6JUzTIA3LyYklh9J/T7u64crmphxUBgAa0zcOMDog6SYfwbNe9YeLQqua5ek4OUAOdK/BHHfVl5W5iaUoQ=="],
 
-    "@angular/material-moment-adapter": ["@angular/material-moment-adapter@18.2.14", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "^18.0.0 || ^19.0.0", "@angular/material": "18.2.14", "moment": "^2.18.1" } }, "sha512-igICm+qQl/KeglU4LcCHgSaaoJR6RUlDzpCs2+kfLSnsvAy5Z0ZauW3pbIsCEIDb0zknBqos9d8x+pXg/bncCQ=="],
+    "@angular/material-moment-adapter": ["@angular/material-moment-adapter@19.2.19", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "^19.0.0 || ^20.0.0", "@angular/material": "19.2.19", "moment": "^2.18.1" } }, "sha512-yL7ES1HgtEW5D3iOkio/PD/UwBgXuyNDkxBdcrRYih+8ihhbaU6rBzCT5juUujjmRtt8Aj+3M80PSq5dlsingA=="],
 
     "@angular/platform-browser": ["@angular/platform-browser@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "19.2.15", "@angular/common": "19.2.15", "@angular/core": "19.2.15" }, "optionalPeers": ["@angular/animations"] }, "sha512-OelQ6weCjon8kZD8kcqNzwugvZJurjS3uMJCwsA2vXmP/3zJ31SWtNqE2zLT1R2csVuwnp0h+nRMgq+pINU7Rg=="],
 
