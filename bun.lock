@@ -70,13 +70,6 @@
       },
     },
   },
-  "overrides": {
-    "@angular/common": "18.2.13",
-    "@angular/core": "18.2.13",
-    "@angular/platform-browser": "18.2.13",
-    "@angular/router": "18.2.13",
-    "eslint": "^8.57.0",
-  },
   "packages": {
     "@adobe/css-tools": ["@adobe/css-tools@4.4.4", "", {}, "sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg=="],
 
@@ -122,13 +115,13 @@
 
     "@angular/cli": ["@angular/cli@19.2.19", "", { "dependencies": { "@angular-devkit/architect": "0.1902.19", "@angular-devkit/core": "19.2.19", "@angular-devkit/schematics": "19.2.19", "@inquirer/prompts": "7.3.2", "@listr2/prompt-adapter-inquirer": "2.0.18", "@schematics/angular": "19.2.19", "@yarnpkg/lockfile": "1.1.0", "ini": "5.0.0", "jsonc-parser": "3.3.1", "listr2": "8.2.5", "npm-package-arg": "12.0.2", "npm-pick-manifest": "10.0.0", "pacote": "20.0.0", "resolve": "1.22.10", "semver": "7.7.1", "symbol-observable": "4.0.0", "yargs": "17.7.2" }, "bin": { "ng": "bin/ng.js" } }, "sha512-e9tAzFNOL4mMWfMnpC9Up83OCTOp2siIj8W41FCp8jfoEnw79AXDDLh3d70kOayiObchksTJVShslTogLUyhMw=="],
 
-    "@angular/common": ["@angular/common@18.2.13", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "18.2.13", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-4ZqrNp1PoZo7VNvW+sbSc2CB2axP1sCH2wXl8B0wdjsj8JY1hF1OhuugwhpAHtGxqewed2kCXayE+ZJqSTV4jw=="],
+    "@angular/common": ["@angular/common@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "19.2.15", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-aVa/ctBYH/4qgA7r4sS7TV+/DzRYmcS+3d6l89pNKUXkI8gpmsd+r3FjccaemX4Wqru1QOrMvC+i+e7IBIVv0g=="],
 
     "@angular/compiler": ["@angular/compiler@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" } }, "sha512-hMHZU6/03xG0tbPDIm1hbVSTFLnRkGYfh+xdBwUMnIFYYTS0QJ2hdPfEZKCJIXm+fz9IAI5MPdDTfeyp0sgaHQ=="],
 
     "@angular/compiler-cli": ["@angular/compiler-cli@19.2.15", "", { "dependencies": { "@babel/core": "7.26.9", "@jridgewell/sourcemap-codec": "^1.4.14", "chokidar": "^4.0.0", "convert-source-map": "^1.5.1", "reflect-metadata": "^0.2.0", "semver": "^7.0.0", "tslib": "^2.3.0", "yargs": "^17.2.1" }, "peerDependencies": { "@angular/compiler": "19.2.15", "typescript": ">=5.5 <5.9" }, "bin": { "ngc": "bundles/src/bin/ngc.js", "ngcc": "bundles/ngcc/index.js", "ng-xi18n": "bundles/src/bin/ng_xi18n.js" } }, "sha512-4r5tvGA2Ok3o8wROZBkF9qNKS7L0AEpdBIkAVJbLw2rBY2SlyycFIRYyV2+D1lJ1jq/f9U7uN6oon0MjTvNYkA=="],
 
-    "@angular/core": ["@angular/core@18.2.13", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.14.10" } }, "sha512-8mbWHMgO95OuFV1Ejy4oKmbe9NOJ3WazQf/f7wks8Bck7pcihd0IKhlPBNjFllbF5o+04EYSwFhEtvEgjMDClA=="],
+    "@angular/core": ["@angular/core@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0" } }, "sha512-PxhzCwwm23N4Mq6oV7UPoYiJF4r6FzGhRSxOBBlEp322k7zEQbIxd/XO6F3eoG73qC1UsOXMYYv6GnQpx42y3A=="],
 
     "@angular/forms": ["@angular/forms@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "19.2.15", "@angular/core": "19.2.15", "@angular/platform-browser": "19.2.15", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-pZDElcYPmNzPxvWJpZQCIizsNApDIfk9xLJE4I8hzLISfWGbQvfjuuarDAuQZEXudeLXoDOstDXkDja40muLGg=="],
 
@@ -138,13 +131,13 @@
 
     "@angular/material-moment-adapter": ["@angular/material-moment-adapter@18.2.14", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "^18.0.0 || ^19.0.0", "@angular/material": "18.2.14", "moment": "^2.18.1" } }, "sha512-igICm+qQl/KeglU4LcCHgSaaoJR6RUlDzpCs2+kfLSnsvAy5Z0ZauW3pbIsCEIDb0zknBqos9d8x+pXg/bncCQ=="],
 
-    "@angular/platform-browser": ["@angular/platform-browser@18.2.13", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "18.2.13", "@angular/common": "18.2.13", "@angular/core": "18.2.13" }, "optionalPeers": ["@angular/animations"] }, "sha512-tu7ZzY6qD3ATdWFzcTcsAKe7M6cJeWbT/4/bF9unyGO3XBPcNYDKoiz10+7ap2PUd0fmPwvuvTvSNJiFEBnB8Q=="],
+    "@angular/platform-browser": ["@angular/platform-browser@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "19.2.15", "@angular/common": "19.2.15", "@angular/core": "19.2.15" }, "optionalPeers": ["@angular/animations"] }, "sha512-OelQ6weCjon8kZD8kcqNzwugvZJurjS3uMJCwsA2vXmP/3zJ31SWtNqE2zLT1R2csVuwnp0h+nRMgq+pINU7Rg=="],
 
     "@angular/platform-browser-dynamic": ["@angular/platform-browser-dynamic@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "19.2.15", "@angular/compiler": "19.2.15", "@angular/core": "19.2.15", "@angular/platform-browser": "19.2.15" } }, "sha512-dKy0SS395FCh8cW9AQ8nf4Wn3XlONaH7z50T1bGxm3eOoRqjxJYyIeIlEbDdJakMz4QPR3dGr81HleZd8TJumQ=="],
 
     "@angular/platform-server": ["@angular/platform-server@19.2.15", "", { "dependencies": { "tslib": "^2.3.0", "xhr2": "^0.2.0" }, "peerDependencies": { "@angular/common": "19.2.15", "@angular/compiler": "19.2.15", "@angular/core": "19.2.15", "@angular/platform-browser": "19.2.15", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-VKuEmzFylYLnFjjFTctnbckgYdXEyt3wU0AwT3uuLrSU/3EgfHlqd33ONuYaIxSRES81GaLcV9cc9uiZYT2QMg=="],
 
-    "@angular/router": ["@angular/router@18.2.13", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "18.2.13", "@angular/core": "18.2.13", "@angular/platform-browser": "18.2.13", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-VKmfgi/r/CkyBq9nChQ/ptmfu0JT/8ONnLVJ5H+SkFLRYJcIRyHLKjRihMCyVm6xM5yktOdCaW73NTQrFz7+bg=="],
+    "@angular/router": ["@angular/router@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "19.2.15", "@angular/core": "19.2.15", "@angular/platform-browser": "19.2.15", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-0TM1D8S7RQ00drKy7hA/ZLBY14dUBqFBgm06djcNcOjNzVAtgkeV0i+0Smq9tCC7UsGKdpZu4RgfYjHATBNlTQ=="],
 
     "@angular/service-worker": ["@angular/service-worker@19.2.15", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "19.2.15", "rxjs": "^6.5.3 || ^7.4.0" }, "bin": { "ngsw-config": "ngsw-config.js" } }, "sha512-H40T8ni4Inx3tNinoQvcEmDsgFErjfzEWnJpoAonDQkzarlu1Qr8vBgv+DX+KzuMKZ3xtsWW9vFnAI4/DilnDw=="],
 
