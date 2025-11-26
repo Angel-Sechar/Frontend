@@ -1,6 +1,6 @@
-# 🧠 Campus Frontend — Angular 19 Clean Architecture
+# 🧠 Campus Frontend — Angular 20 Clean Architecture
 
-Modern **Angular 19** web application built with **Server-Side Rendering (SSR)**, **Signals**, and **Clean Architecture** principles.  
+Modern **Angular 20** web application built with **Server-Side Rendering (SSR)**, **Signals**, and **Clean Architecture** principles.  
 This frontend is designed for scalability, maintainability, and high performance — serving as the UI layer for the Campus microservice ecosystem.
 
 ---
@@ -16,7 +16,7 @@ It integrates **Bun.js**, **TailwindCSS**, **Angular Material**, and **ESLint (A
 
 | Area                    | Technology                                        |
 | ----------------------- | ------------------------------------------------- |
-| **Framework**           | Angular 19                                        |
+| **Framework**           | Angular 20                                        |
 | **Language**            | TypeScript                                        |
 | **Runtime**             | Bun.js                                            |
 | **UI**                  | TailwindCSS, Angular Material                     |
