@@ -29,23 +29,23 @@ $my-theme: mat.define-theme(
    ========================================================================== */
 .mat-mdc-form-field {
   /* Colores de etiquetas */
-  --mdc-floating-label-ink-color: #000;
-  --mdc-floating-label-floating-color: #000;
+  --mat-floating-label-ink-color: #000;
+  --mat-floating-label-floating-color: #000;
 
   /* Fondo blanco */
-  --mdc-filled-text-field-container-color: #ffffff;
-  --mdc-outlined-text-field-container-color: #ffffff;
+  --mat-form-field-filled-container-color: #ffffff;
+  --mat-form-field-outlined-container-color: #ffffff;
 
   /* Texto y etiquetas en gris */
-  --mdc-filled-text-field-label-text-color: #374151;
-  --mdc-outlined-text-field-label-text-color: #374151;
-  --mdc-filled-text-field-input-text-color: #374151;
-  --mdc-outlined-text-field-input-text-color: #374151;
+  --mat-form-field-filled-label-text-color: #374151;
+  --mat-form-field-outlined-label-text-color: #374151;
+  --mat-form-field-filled-input-text-color: #374151;
+  --mat-form-field-outlined-input-text-color: #374151;
 
   /* Borde azul oscuro */
-  --mdc-outlined-text-field-outline-color: #1e3a8a;
-  --mdc-outlined-text-field-hover-outline-color: #1e40af;
-  --mdc-outlined-text-field-focus-outline-color: #1d4ed8;
+  --mat-form-field-outlined-outline-color: #1e3a8a;
+  --mat-form-field-outlined-hover-outline-color: #1e40af;
+  --mat-form-field-outlined-focus-outline-color: #1d4ed8;
 }
 
 /* Tamaño del texto de error */
@@ -65,10 +65,10 @@ $my-theme: mat.define-theme(
    ========================================================================== */
 .mat-mdc-select {
   /* Fondo y texto coherente con los inputs */
-  --mdc-menu-item-label-text-color: #374151;
-  --mdc-menu-container-color: #ffffff;
-  --mdc-filled-text-field-container-color: #ffffff;
-  --mdc-outlined-text-field-container-color: #ffffff;
+  --mat-menu-item-label-text-color: #374151;
+  --mat-menu-container-color: #ffffff;
+  --mat-form-field-filled-container-color: #ffffff;
+  --mat-form-field-outlined-container-color: #ffffff;
 
   /* Bordes redondeados */
   border-radius: 0.5rem;
@@ -119,18 +119,18 @@ mat-card-header {
 /* Checkbox personalizado - términos y condiciones */
 .mat-mdc-checkbox {
   /* Estado unchecked */
-  --mdc-checkbox-unselected-icon-color: #1e3a8a;
-  --mdc-checkbox-unselected-hover-icon-color: #1e40af;
-  --mdc-checkbox-unselected-focus-icon-color: #1d4ed8;
+  --mat-checkbox-unselected-icon-color: #1e3a8a;
+  --mat-checkbox-unselected-hover-icon-color: #1e40af;
+  --mat-checkbox-unselected-focus-icon-color: #1d4ed8;
 
   /* Estado checked */
-  --mdc-checkbox-selected-icon-color: #ffffff;
-  --mdc-checkbox-selected-hover-icon-color: #f9fafb;
-  --mdc-checkbox-selected-focus-icon-color: #ffffff;
-  --mdc-checkbox-selected-pressed-icon-color: #e5e7eb;
+  --mat-checkbox-selected-icon-color: #ffffff;
+  --mat-checkbox-selected-hover-icon-color: #f9fafb;
+  --mat-checkbox-selected-focus-icon-color: #ffffff;
+  --mat-checkbox-selected-pressed-icon-color: #e5e7eb;
 
   /* Color del checkmark */
-  --mdc-checkbox-selected-checkmark-color: #1e3a8a;
+  --mat-checkbox-selected-checkmark-color: #1e3a8a;
 
   /* Ripple effect */
   .mat-ripple-element {
